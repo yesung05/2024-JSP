@@ -1,0 +1,5 @@
+cd C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+create database basicjsp;
+
+create user 'jspid'@'localhost' identified by 'jsppass';

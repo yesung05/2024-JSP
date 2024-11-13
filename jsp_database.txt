@@ -1,0 +1,30 @@
+CD   C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+create database basicjsp;
+
+create user 'jspid'@'localhost' identified by 'jsppass';
+
+grant all privileges on basicjsp.* to 'jspid'@'localhost';
+
+grant PROCESS on *.* to 'jspid'@'localhost';
+
+create table member(
+    id   varchar(50) not null primary key,
+    pass   varchar(16) not null,
+    name  varchar(10) not null,
+    reg_date datetime not null
+);
+
+create table test(
+    num_id   int  not null primary key auto_increment,
+    title   varchar(50) not null,
+    content text not null
+);
+
+
+
+
+
+
+
+
