@@ -1,8 +1,6 @@
 @echo off
-REM MySQL 경로로 이동
 cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
 
-REM MySQL 명령 실행
 mysql -u root -pdongyang -e "CREATE DATABASE IF NOT EXISTS basicjsp; \
 CREATE USER IF NOT EXISTS 'jspid'@'localhost' IDENTIFIED BY 'jsppass'; \
 GRANT ALL PRIVILEGES ON basicjsp.* TO 'jspid'@'localhost'; \

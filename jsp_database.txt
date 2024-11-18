@@ -1,4 +1,8 @@
 CD   C:\Program Files\MySQL\MySQL Server 8.0\bin
+mysql -u root -p
+
+use mysql;
+select user, host from user; -> 유저 목록 확인
 
 create database basicjsp;
 
@@ -8,11 +12,16 @@ grant all privileges on basicjsp.* to 'jspid'@'localhost';
 
 grant PROCESS on *.* to 'jspid'@'localhost';
 
+mysql 한번 빠져나감
+mysql -u jspid -p
+jsppass
+
+use basicjsp;
 create table member(
     id   varchar(50) not null primary key,
     pass   varchar(16) not null,
     name  varchar(10) not null,
-    reg_date datetime not null
+    reg_date datetime not nul
 );
 
 create table test(
@@ -21,10 +30,13 @@ create table test(
     content text not null
 );
 
+db 연결 명 : mysqlconn
 
+C:\Program Files\Java\jdk-11\lib
 
+jar 파일을 Web-inf 아래 lib에 넣기
 
-
+https://siloam72761.tistory.com/entry/Java-이클립스와-Mysql-80-연동하기-JDBC-연결
 
 
 
