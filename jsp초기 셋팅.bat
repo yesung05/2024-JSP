@@ -6,6 +6,7 @@ echo ※ 동양미래대학교 3호관 109-1강의실의 컴퓨터 기준으로 작성되었습니다.
 echo ※ 개인 컴퓨터에 사용시 정상 실행이 되지 않을 수 있습니다.
 ::made by Yesung.Cho
 
+c:
 cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 mysql -u root -pdongyang -e "CREATE DATABASE IF NOT EXISTS basicjsp;CREATE USER 'jspid'@'localhost' identified by 'jsppass';grant all privileges on basicjsp.* to 'jspid'@'localhost';grant PROCESS on *.* to 'jspid'@'localhost';"
 echo ------------------------------------------
