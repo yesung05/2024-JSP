@@ -6,22 +6,43 @@
 <body>
 <h3>switch 문으로 커피 주문</h3>
 <hr>
+<table>
+	<tr>
+		<td>에스프레소</td>
+		<td>2000원</td>
+	</tr>
+	<tr>
+		<td>카푸치노</td>
+		<td>3000원</td>
+	</tr>
+	<tr>
+		<td>카페라떼</td>
+		<td>3500원</td>
+	</tr>
+</table>
 <script>
 var price = 0;
 var coffee = prompt("무슨 커피 드릴까요?","");
+var selt = false;
 switch(coffee) {
 	case "espresso" :
 	case "에스프레소" : price = 2000;
+	selt = true;
 		break;
 	case "카푸치노" : price = 3000;
+	selt = true;
 		break;
 	case "카페라떼" : price = 3500;
+	selt = true;
 		break;		
 	default : 
 		document.write(coffee + "는 없습니다.");
 }
+if(selt)
+	var glass = prompt("몇 잔 드릴까요?","");
+glass = parseInt(glass);
 if(price != 0)
-	document.write(coffee + "는 " + price + "원입니다.");
+	document.write(coffee + glass + " 잔은" + price*glass + " 원입니다.");
 </script>
 </body>
 </html>
