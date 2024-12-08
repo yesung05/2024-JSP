@@ -28,9 +28,6 @@ String jdbcUrl="jdbc:mysql://localhost:3306/basicjsp";
  
 Class.forName("com.mysql.jdbc.Driver");
 conn=DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
-	
-
-
 	%>
 	
 <center><font size='3'><b> 게시판 </b></font></TD>
@@ -66,7 +63,7 @@ while (rs.next()) {
 	<TR bgcolor='ededed'>     
 		<TD align=center><font size=2 color='black'><%=num %></font></TD>     
 		<TD align=left>
-			<a href="write-input.jsp?num= <%=num %>">
+			<a href="write_output.jsp?num= <%=num %>">
 			<font size=2 color="black"><%=title %></font></a>
 		</TD>
 		<TD align=center>    
@@ -77,7 +74,6 @@ while (rs.next()) {
 		</TD>     
 		<TD align=center><font size=2><%=readcount %></font>     
 	</TR> 
-	<br>
 	<%}%>
 </TABLE>     
 
